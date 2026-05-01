@@ -765,6 +765,13 @@ export default function App() {
       {/* SEKCJA O NAS / CECHY */}
       <section id="o-nas" className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-lg text-stone-600 leading-relaxed">
+              Od lat to miejsce przy porcie gromadzi mieszkancow i gosci, ktorzy wracaja po domowy smak i spokojna
+              atmosfere nad Zalewem Zegrzynskim. Raczna Robota 2.0 kontynuuje te tradycje, laczac lokalna historie z
+              nowoczesna kuchnia i serdeczna obsluga.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {content.aboutCards.map((card, index) => {
               const Icon = iconMap[card.icon] || ChefHat;
