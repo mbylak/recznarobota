@@ -121,6 +121,93 @@ const iconMap = {
   utensils: Utensils,
 };
 
+const googleReviews = [
+  {
+    author: 'Konrad Futera',
+    meta: 'Lokalny przewodnik',
+    time: '8 miesięcy temu',
+    text: 'Bardzo smaczne i świeże jedzenie, warto poczekać. Duży plus za możliwość dopłynięcia kajakiem lub łodzią.',
+  },
+  {
+    author: 'Justyna',
+    meta: 'Lokalny przewodnik',
+    time: '7 miesięcy temu',
+    text: 'Odkrycie dekady: pyszne jedzenie nad samym jeziorem, piękny widok i super klimat.',
+  },
+  {
+    author: 'Arek Winkowski',
+    meta: '2 opinie',
+    time: '9 miesięcy temu',
+    text: 'Świetne jedzenie i wyjątkowa opcja „woddrive” - można zjeść przy pomoście na własnej łódce.',
+  },
+  {
+    author: 'Miecio74',
+    meta: 'Lokalny przewodnik',
+    time: '8 miesięcy temu',
+    text: 'Porcje nie za duże, ale sycące. Burger i frytki na plus.',
+  },
+  {
+    author: 'Łukasz Jot',
+    meta: 'Lokalny przewodnik',
+    time: '9 miesięcy temu',
+    text: 'Mimo nazwy „bar”, kuchnia na poziomie restauracji z wyższej półki.',
+  },
+  {
+    author: 'Antoni Pacyna',
+    meta: '2 opinie',
+    time: '6 miesięcy temu',
+    text: 'Niesamowite miejsce. Schabowy idealnie usmażony, dodatki świeże i bardzo smaczne.',
+  },
+  {
+    author: 'Joanna Ciszewska',
+    meta: '1 opinia',
+    time: '7 miesięcy temu',
+    text: 'Bardzo dobre jedzenie, fajny klimat i świetna obsługa.',
+  },
+  {
+    author: 'Arek Madanowski',
+    meta: '8 opinii',
+    time: '9 miesięcy temu',
+    text: 'Idealne miejsce przed lub po pływaniu - dobre jedzenie, ogródek nad wodą i klimat.',
+  },
+  {
+    author: 'Paulina P',
+    meta: 'Lokalny przewodnik',
+    time: '8 miesięcy temu',
+    text: 'Bardzo miła obsługa, naprawdę dobre jedzenie i ładny widok.',
+  },
+  {
+    author: 'Arleta Kędzierska',
+    meta: '7 opinii',
+    time: '9 miesięcy temu',
+    text: 'Pyszne jedzenie, klimatyczne miejsce, bardzo dobry żurek i ryba.',
+  },
+  {
+    author: 'Anna Kajewska',
+    meta: '6 opinii',
+    time: '8 miesięcy temu',
+    text: 'Pyszne, świeże jedzenie. Duży atut: można dopłynąć z wody, są pomosty.',
+  },
+  {
+    author: 'Dariusz Kuchta',
+    meta: 'Lokalny przewodnik',
+    time: '7 miesięcy temu',
+    text: 'Super obsługa i pyszny schabowy.',
+  },
+  {
+    author: 'Radosław Drozda',
+    meta: 'Lokalny przewodnik',
+    time: '8 miesięcy temu',
+    text: 'Piękne widoki i smaczne jedzenie.',
+  },
+  {
+    author: 'Lukasz Lukasz',
+    meta: 'Lokalny przewodnik',
+    time: '2 miesiące temu',
+    text: 'Najlepsze miejsce.',
+  },
+];
+
 const slugify = (value) =>
   value
     .toLowerCase()
@@ -851,6 +938,37 @@ export default function App() {
               <img key={`${image.alt}-${index}`} src={image.url} alt={image.alt} className="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity cursor-pointer" />
             ))}
          </div>
+      </section>
+
+      {/* OPINIE GOOGLE */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-sm font-bold text-red-600 tracking-widest uppercase mb-2">Opinie Google</h2>
+            <h3 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-4">Goście nas polecają</h3>
+            <div className="inline-flex items-center gap-3 bg-stone-100 px-5 py-2 rounded-full">
+              <span className="text-yellow-500 text-xl tracking-wide">★★★★★</span>
+              <span className="font-semibold text-stone-800">4,8/5</span>
+              <span className="text-stone-500">(14 opinii)</span>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {googleReviews.map((review) => (
+              <article key={review.author} className="border border-stone-200 rounded-2xl p-5 bg-stone-50">
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div>
+                    <p className="font-bold text-stone-900">{review.author}</p>
+                    <p className="text-xs text-stone-500">{review.meta}</p>
+                  </div>
+                  <span className="text-xs text-stone-500 whitespace-nowrap">{review.time}</span>
+                </div>
+                <p className="text-yellow-500 text-sm tracking-wide mb-2">★★★★★</p>
+                <p className="text-stone-600 leading-relaxed text-sm">{review.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* KONTAKT I MAPA - PITCH SPRZEDAŻOWY */}
