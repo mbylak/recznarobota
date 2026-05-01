@@ -896,7 +896,7 @@ export default function App() {
               <div className="aspect-square md:aspect-[4/3] bg-stone-200 rounded-xl overflow-hidden">
                 <iframe
                   title="Google Maps - Zegrzyńska 10, Nieporęt"
-                  src="https://maps.google.com/maps?q=Zegrzy%C5%84ska%2010%2C%20Niepor%C4%99t&z=16&output=embed"
+                  src="https://maps.google.com/maps?q=52.4351973,21.0329947&z=18&output=embed"
                   className="w-full h-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
