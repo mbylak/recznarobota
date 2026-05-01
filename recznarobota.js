@@ -124,23 +124,51 @@ const iconMap = {
 const googleReviews = [
   {
     author: 'Konrad F.',
-    time: '8 miesięcy temu',
     text: 'Bardzo smaczne i świeże jedzenie, warto poczekać. Duży plus za możliwość dopłynięcia kajakiem lub łodzią.',
   },
   {
     author: 'Justyna J.',
-    time: '7 miesięcy temu',
     text: 'Odkrycie dekady: pyszne jedzenie nad samym jeziorem, piękny widok i super klimat.',
   },
   {
     author: 'Łukasz J.',
-    time: '9 miesięcy temu',
     text: 'Mimo nazwy „bar”, kuchnia na poziomie restauracji z wyższej półki.',
   },
   {
     author: 'Antoni P.',
-    time: '6 miesięcy temu',
     text: 'Niesamowite miejsce. Schabowy idealnie usmażony, dodatki świeże i bardzo smaczne.',
+  },
+  {
+    author: 'Joanna C.',
+    text: 'Bardzo dobre jedzenie, fajny klimat i super obsługa. Zdecydowanie miejsce warte powrotu.',
+  },
+  {
+    author: 'Anna K.',
+    text: 'Pyszne, świeże jedzenie i duży plus za możliwość dopłynięcia od strony wody.',
+  },
+  {
+    author: 'Dariusz K.',
+    text: 'Super obsługa i pyszny schabowy. Prosto, konkretnie i bardzo smacznie.',
+  },
+  {
+    author: 'Radosław D.',
+    text: 'Piękne widoki, smaczne jedzenie i świetny klimat nad wodą.',
+  },
+  {
+    author: 'Arek M.',
+    text: 'Idealne miejsce przed lub po pływaniu - dobre jedzenie i fajny ogródek nad jeziorem.',
+  },
+  {
+    author: 'Paulina P.',
+    text: 'Bardzo miła obsługa, dobre jedzenie i piękny widok. Polecam na spokojny obiad.',
+  },
+  {
+    author: 'Arleta K.',
+    text: 'Klimatyczne miejsce, pyszne jedzenie i bardzo dobry żurek. Chętnie wrócimy.',
+  },
+  {
+    author: 'Lukasz L.',
+    text: 'Najlepsze miejsce.',
   },
 ];
 
@@ -891,7 +919,6 @@ export default function App() {
             <div className="inline-flex items-center gap-3 bg-stone-100 px-5 py-2 rounded-full">
               <span className="text-yellow-500 text-xl tracking-wide">★★★★★</span>
               <span className="font-semibold text-stone-800">4,8/5</span>
-              <span className="text-stone-500">(14 opinii)</span>
             </div>
           </div>
 
@@ -905,8 +932,7 @@ export default function App() {
                   key={`${review.author}-${index}`}
                   className="w-56 h-56 md:w-60 md:h-60 shrink-0 border border-stone-200 rounded-2xl p-5 bg-stone-50 flex flex-col items-center justify-center text-center"
                 >
-                  <p className="font-bold text-stone-900 mb-1">{review.author}</p>
-                  <span className="text-xs text-stone-500 whitespace-nowrap mb-3">{review.time}</span>
+                  <p className="font-bold text-stone-900 mb-3">{review.author}</p>
                   <p className="text-yellow-500 text-sm tracking-wide mb-2">★★★★★</p>
                   <p className="text-stone-600 leading-relaxed text-sm overflow-hidden">{review.text}</p>
                 </article>
