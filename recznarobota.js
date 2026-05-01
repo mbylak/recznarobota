@@ -891,20 +891,17 @@ export default function App() {
 
             </div>
 
-            {/* Wizualizacja Mapy Google - Aspekt sprzedażowy! */}
-            <div className="bg-white p-2 rounded-2xl shadow-xl relative overflow-hidden group">
-               {/* Ten element ma symulować problem braku pinezki i to, że my go rozwiążemy */}
-              <div className="absolute inset-0 bg-stone-900/80 z-10 flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <MapPin className="w-16 h-16 text-red-500 mb-4 animate-bounce" />
-                 <h3 className="text-2xl font-bold text-white mb-2">Brakuje Was na mapie!</h3>
-                 <p className="text-stone-300 max-w-sm">W ramach stworzenia strony, skonfigurujemy dla Państwa profesjonalną wizytówkę Google z pinezką, aby klienci z portu trafiali tu bez problemu.</p>
-              </div>
-              <div className="aspect-square md:aspect-[4/3] bg-stone-200 rounded-xl overflow-hidden relative">
-                 {/* Fake Map Image */}
-                 <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Mapa Nieporęt" className="w-full h-full object-cover blur-[2px]" />
-                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 font-bold text-stone-800">
-                    <ChefHat className="w-5 h-5 text-red-600" /> Wodnik
-                 </div>
+            {/* Mapa Google z pinezka lokalu */}
+            <div className="bg-white p-2 rounded-2xl shadow-xl overflow-hidden">
+              <div className="aspect-square md:aspect-[4/3] bg-stone-200 rounded-xl overflow-hidden">
+                <iframe
+                  title="Google Maps - Zegrzyńska 10, Nieporęt"
+                  src="https://maps.google.com/maps?q=Zegrzy%C5%84ska%2010%2C%20Niepor%C4%99t&z=16&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </div>
 
