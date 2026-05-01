@@ -20,12 +20,12 @@ const defaultContent = {
     { label: 'Kontakt', href: '#kontakt' },
   ],
   hero: {
-    badge: 'Sezon 2026 otwarty!',
+    badge: 'Sezon 2026 otwarty! ☀️',
     titleTop: 'Prawdziwy smak',
     titleAccent: 'nad Zalewem',
     description: 'Port Nieporęt. Świeże ryby, rzemieślnicza pizza i prawdziwa, ręczna robota.',
     backgroundImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80',
-    ctaPrimary: 'Zobacz Menu',
+    ctaPrimary: 'Zobacz menu',
     ctaSecondary: 'Nasz Facebook',
   },
   aboutCards: [
@@ -778,7 +778,7 @@ export default function App() {
             <a href="#menu" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4 rounded-full transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] flex items-center justify-center gap-2 font-medium">
               {content.hero.ctaPrimary} <ChevronRight className="w-5 h-5" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/30 text-lg px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2 font-medium">
+            <a href="https://www.facebook.com/profile.php?id=61577435373395" target="_blank" rel="noreferrer" className="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/30 text-lg px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2 font-medium">
               <Facebook className="w-5 h-5" /> {content.hero.ctaSecondary}
             </a>
           </div>
