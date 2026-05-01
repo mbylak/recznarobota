@@ -20,7 +20,7 @@ const defaultContent = {
     { label: 'Kontakt', href: '#kontakt' },
   ],
   hero: {
-    badge: 'Sezon 2026 otwarty! ☀️',
+    badge: '☀️ Sezon 2026 otwarty!',
     titleTop: 'Prawdziwy smak',
     titleAccent: 'nad Zalewem',
     description: 'Port Nieporęt. Świeże ryby, rzemieślnicza pizza i prawdziwa, ręczna robota.',
@@ -788,11 +788,11 @@ export default function App() {
       {/* SEKCJA O NAS / CECHY */}
       <section id="o-nas" className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-lg text-stone-600 leading-relaxed">
-              Od lat to miejsce przy porcie gromadzi mieszkancow i gosci, ktorzy wracaja po domowy smak i spokojna
-              atmosfere nad Zalewem Zegrzynskim. Raczna Robota 2.0 kontynuuje te tradycje, laczac lokalna historie z
-              nowoczesna kuchnia i serdeczna obsluga.
+          <div className="max-w-3xl mx-auto text-center mb-12 bg-white border border-stone-200 rounded-2xl p-6 shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-3">Historia miejsca</h3>
+            <p className="text-lg md:text-xl text-stone-700 leading-relaxed">
+              Od lat to punkt spotkań wodniaków i mieszkańców Nieporętu. Ręczna Robota 2.0 kontynuuje tę tradycję:
+              świeże jedzenie, serdeczna obsługa i klimat portu, do którego chce się wracać.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -879,6 +879,12 @@ export default function App() {
       {/* OPINIE GOOGLE */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <style>{`
+            @keyframes reviews-scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+          `}</style>
           <div className="text-center mb-12">
             <h2 className="text-sm font-bold text-red-600 tracking-widest uppercase mb-2">Opinie Google</h2>
             <h3 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-4">Goście nas polecają</h3>
@@ -889,19 +895,23 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {googleReviews.map((review) => (
-              <article key={review.author} className="border border-stone-200 rounded-2xl p-5 bg-stone-50">
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <div>
-                    <p className="font-bold text-stone-900">{review.author}</p>
-                  </div>
-                  <span className="text-xs text-stone-500 whitespace-nowrap">{review.time}</span>
-                </div>
-                <p className="text-yellow-500 text-sm tracking-wide mb-2">★★★★★</p>
-                <p className="text-stone-600 leading-relaxed text-sm">{review.text}</p>
-              </article>
-            ))}
+          <div className="overflow-hidden">
+            <div
+              className="flex w-max gap-4 pr-4 hover:[animation-play-state:paused]"
+              style={{ animation: 'reviews-scroll 30s linear infinite' }}
+            >
+              {[...googleReviews, ...googleReviews].map((review, index) => (
+                <article
+                  key={`${review.author}-${index}`}
+                  className="w-56 h-56 md:w-60 md:h-60 shrink-0 border border-stone-200 rounded-2xl p-5 bg-stone-50 flex flex-col items-center justify-center text-center"
+                >
+                  <p className="font-bold text-stone-900 mb-1">{review.author}</p>
+                  <span className="text-xs text-stone-500 whitespace-nowrap mb-3">{review.time}</span>
+                  <p className="text-yellow-500 text-sm tracking-wide mb-2">★★★★★</p>
+                  <p className="text-stone-600 leading-relaxed text-sm overflow-hidden">{review.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
           <div className="mt-10 text-center">
             <a
