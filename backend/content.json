@@ -1,0 +1,86 @@
+{
+  "branding": {
+    "name": "Ręczna Robota",
+    "accent": "2.0",
+    "phone": "537 961 666"
+  },
+  "navLinks": [
+    { "label": "O nas", "href": "#o-nas" },
+    { "label": "Menu", "href": "#menu" },
+    { "label": "Kontakt", "href": "#kontakt" }
+  ],
+  "hero": {
+    "badge": "Sezon 2026 otwarty!",
+    "titleTop": "Prawdziwy smak",
+    "titleAccent": "nad Zalewem",
+    "description": "Port Nieporęt. Świeże ryby, rzemieślnicza pizza i prawdziwa, ręczna robota.",
+    "backgroundImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80",
+    "ctaPrimary": "Zobacz Menu",
+    "ctaSecondary": "Nasz Facebook"
+  },
+  "aboutCards": [
+    {
+      "icon": "chef",
+      "title": "Ręczna Robota",
+      "text": "Wszystko przygotowujemy od podstaw. Nasze ciasto do pizzy i domowe zupy to nasz powód do dumy."
+    },
+    {
+      "icon": "anchor",
+      "title": "Klimat Portu",
+      "text": "Idealne miejsce na odpoczynek. Poczuj mazurski klimat nad Zalewem Zegrzyńskim w Porcie Nieporęt."
+    },
+    {
+      "icon": "utensils",
+      "title": "Świeże Składniki",
+      "text": "Od pysznego sandacza po wysokiej jakości włoskie sery na naszej pizzy. Nie uznajemy kompromisów."
+    }
+  ],
+  "menuCategories": [
+    {
+      "id": "zupy",
+      "label": "Zupy",
+      "items": [
+        { "name": "Żurek z białą kiełbasą", "desc": "Podgrzybki / Jajo", "price": "18" },
+        { "name": "Pomidorowa z makaronem", "desc": "Klasyczna, domowa", "price": "15" }
+      ]
+    },
+    {
+      "id": "dania_glowne",
+      "label": "Dania Główne",
+      "items": [
+        { "name": "Schabowy", "desc": "Ziemniaki / Koperek / Kapusta zasmażana", "price": "38" },
+        { "name": "Grillowana pierś z kurczaka", "desc": "Frytki / Sos tzatziki / Surówka z białej kapusty", "price": "37" },
+        { "name": "Sandacz 180g", "desc": "Opiekane ziemniaki / Blanszowany szpinak", "price": "57" }
+      ]
+    },
+    {
+      "id": "pizza",
+      "label": "Pizza 32cm",
+      "items": [
+        { "name": "Salame Picante", "desc": "Sos pomidorowy / Mozzarella / Spianata / Ricotta / Papryka", "price": "42" },
+        { "name": "Cotto Funghi", "desc": "Sos pomidorowy / Mozzarella / Szynka Cotto / Pieczarki / Rukola", "price": "37" }
+      ]
+    }
+  ],
+  "gallery": [
+    { "alt": "Pizza", "url": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80" },
+    { "alt": "Danie", "url": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80" },
+    { "alt": "Zupa", "url": "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=600&q=80" },
+    { "alt": "Drinki", "url": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" }
+  ],
+  "contact": {
+    "sectionTitle": "Zapraszamy do nas",
+    "locationTitle": "Lokalizacja",
+    "address": "Zegrzyńska 10",
+    "city": "05-126 Nieporęt",
+    "locationNote": "(Teren portu Wodnik)",
+    "hoursTitle": "Godziny otwarcia",
+    "hoursDays": "Poniedziałek - Niedziela",
+    "hoursTime": "12:00 - 21:00",
+    "contactTitle": "Kontakt"
+  },
+  "footer": {
+    "copyright": "2026 Ręczna Robota 2.0 Wodnik.",
+    "implementation": "Projekt i realizacja: TwójBrand"
+  }
+}
