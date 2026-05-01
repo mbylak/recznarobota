@@ -673,18 +673,17 @@ export default function App() {
       )}
 
       {/* NAWIGACJA */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-black/45 backdrop-blur-sm py-5'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-5' : 'bg-black/45 backdrop-blur-sm py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-              <img
-                src={content.branding.logo}
-                alt={`${content.branding.name} logo`}
-                className={`h-14 md:h-16 w-auto transition-all duration-300 ${isScrolled ? 'brightness-100 invert-0' : 'brightness-0 invert'}`}
-              />
-              <span className={`font-serif font-bold text-2xl tracking-wider uppercase ${isScrolled ? 'text-stone-900' : 'text-white'}`}>
-                {content.branding.name} <span className="text-red-600">{content.branding.accent}</span>
-              </span>
+              {isScrolled && (
+                <img
+                  src={content.branding.logo}
+                  alt={`${content.branding.name} logo`}
+                  className="h-28 md:h-32 w-auto transition-all duration-300"
+                />
+              )}
             </div>
             
             {/* Desktop Menu */}
