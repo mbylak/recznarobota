@@ -7,7 +7,7 @@ export default defineConfig({
       include: /\.[jt]sx?$/,
     }),
   ],
-  base: '/recznarobota/',
+  base: '/',
   esbuild: {
     loader: 'jsx',
     include: /\.js$/,

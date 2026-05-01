@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Phone, MapPin, Clock, ChefHat, Utensils, Anchor, Menu as MenuIcon, X, Facebook, Instagram, ChevronRight, Settings, LogIn, LogOut, Save, AlertCircle } from 'lucide-react';
+import restaurantLogo from './logo.png';
 
 const STORAGE_KEY = 'reczna-robota-cms-cache';
 const TOKEN_STORAGE_KEY = 'reczna-robota-cms-token';
-const restaurantLogo =
-  'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80';
 const API_BASE_URL =
   (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL) || 'http://localhost:4000';
 
