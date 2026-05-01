@@ -123,88 +123,24 @@ const iconMap = {
 
 const googleReviews = [
   {
-    author: 'Konrad Futera',
-    meta: 'Lokalny przewodnik',
+    author: 'Konrad F.',
     time: '8 miesięcy temu',
     text: 'Bardzo smaczne i świeże jedzenie, warto poczekać. Duży plus za możliwość dopłynięcia kajakiem lub łodzią.',
   },
   {
-    author: 'Justyna',
-    meta: 'Lokalny przewodnik',
+    author: 'Justyna J.',
     time: '7 miesięcy temu',
     text: 'Odkrycie dekady: pyszne jedzenie nad samym jeziorem, piękny widok i super klimat.',
   },
   {
-    author: 'Arek Winkowski',
-    meta: '2 opinie',
-    time: '9 miesięcy temu',
-    text: 'Świetne jedzenie i wyjątkowa opcja „woddrive” - można zjeść przy pomoście na własnej łódce.',
-  },
-  {
-    author: 'Miecio74',
-    meta: 'Lokalny przewodnik',
-    time: '8 miesięcy temu',
-    text: 'Porcje nie za duże, ale sycące. Burger i frytki na plus.',
-  },
-  {
-    author: 'Łukasz Jot',
-    meta: 'Lokalny przewodnik',
+    author: 'Łukasz J.',
     time: '9 miesięcy temu',
     text: 'Mimo nazwy „bar”, kuchnia na poziomie restauracji z wyższej półki.',
   },
   {
-    author: 'Antoni Pacyna',
-    meta: '2 opinie',
+    author: 'Antoni P.',
     time: '6 miesięcy temu',
     text: 'Niesamowite miejsce. Schabowy idealnie usmażony, dodatki świeże i bardzo smaczne.',
-  },
-  {
-    author: 'Joanna Ciszewska',
-    meta: '1 opinia',
-    time: '7 miesięcy temu',
-    text: 'Bardzo dobre jedzenie, fajny klimat i świetna obsługa.',
-  },
-  {
-    author: 'Arek Madanowski',
-    meta: '8 opinii',
-    time: '9 miesięcy temu',
-    text: 'Idealne miejsce przed lub po pływaniu - dobre jedzenie, ogródek nad wodą i klimat.',
-  },
-  {
-    author: 'Paulina P',
-    meta: 'Lokalny przewodnik',
-    time: '8 miesięcy temu',
-    text: 'Bardzo miła obsługa, naprawdę dobre jedzenie i ładny widok.',
-  },
-  {
-    author: 'Arleta Kędzierska',
-    meta: '7 opinii',
-    time: '9 miesięcy temu',
-    text: 'Pyszne jedzenie, klimatyczne miejsce, bardzo dobry żurek i ryba.',
-  },
-  {
-    author: 'Anna Kajewska',
-    meta: '6 opinii',
-    time: '8 miesięcy temu',
-    text: 'Pyszne, świeże jedzenie. Duży atut: można dopłynąć z wody, są pomosty.',
-  },
-  {
-    author: 'Dariusz Kuchta',
-    meta: 'Lokalny przewodnik',
-    time: '7 miesięcy temu',
-    text: 'Super obsługa i pyszny schabowy.',
-  },
-  {
-    author: 'Radosław Drozda',
-    meta: 'Lokalny przewodnik',
-    time: '8 miesięcy temu',
-    text: 'Piękne widoki i smaczne jedzenie.',
-  },
-  {
-    author: 'Lukasz Lukasz',
-    meta: 'Lokalny przewodnik',
-    time: '2 miesiące temu',
-    text: 'Najlepsze miejsce.',
   },
 ];
 
@@ -959,7 +895,6 @@ export default function App() {
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div>
                     <p className="font-bold text-stone-900">{review.author}</p>
-                    <p className="text-xs text-stone-500">{review.meta}</p>
                   </div>
                   <span className="text-xs text-stone-500 whitespace-nowrap">{review.time}</span>
                 </div>
@@ -967,6 +902,16 @@ export default function App() {
                 <p className="text-stone-600 leading-relaxed text-sm">{review.text}</p>
               </article>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href="https://www.google.com/maps/place/R%C4%99czna+Robota+2.0+WODNIK/@52.4356633,21.0312721,534m/data=!3m1!1e3!4m6!3m5!1s0x471ec715585bb5a7:0x41a77db0f873d346!8m2!3d52.4351973!4d21.0329947!16s%2Fg%2F11yfsk689_?hl=pl-PL&entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-stone-900 hover:bg-black text-white px-6 py-3 rounded-full font-medium transition-all"
+            >
+              Zobacz wszystkie opinie
+            </a>
           </div>
         </div>
       </section>
